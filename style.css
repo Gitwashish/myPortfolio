@@ -1,0 +1,138 @@
+ :root {
+      --bg: #000000;
+      --card: #191d24;
+      --accent: #7c5cff;
+      --text: #e6eef6;
+      --muted: #9aa4b2;
+  }
+
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
+  body {
+      font-family: Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+  }
+
+  header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(255, 255, 255, 0.02);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+  }
+
+  nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--muted);
+      transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+      color: var(--accent);
+  }
+
+  .hero {
+      background: url("assets/bg3.jpg") no-repeat;
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px;
+  }
+
+  .hero h1 {
+      font-size: 3rem;
+  }
+
+  .hero h1 span {
+      color: rgba(103, 89, 255, 0.587);
+  }
+
+  .hero p {
+      max-width: 600px;
+      color: var(--muted);
+      margin: 20px 0;
+  }
+
+  .btn {
+      background: var(--accent);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+  }
+
+  .btn:hover {
+      background: #6748ff;
+  }
+
+  section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+  }
+
+  .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+  }
+
+  .card {
+      cursor: pointer;
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .card img {
+      max-width: 100%;
+      border-radius: 8px;
+  }
+
+  .card p a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: rgb(241, 188, 241);
+      transition: color 0.3s ease;
+  }
+
+  .card p a:hover {
+      color: var(--accent);
+  }
+
+  footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+  }
+
+  @media (max-width: 768px) {
+      header {
+          flex-direction: column;
+      }
+
+      .hero h1 {
+          font-size: 2.2rem;
+      }
+  }
+
